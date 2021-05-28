@@ -46,8 +46,8 @@ Use this template:
     "GameVersion": "N/A",
     "Dependencies": [],
     "OptionalDependencies": [
-		"DeliCollective-Deli-0.4.1"
-	],
+        "DeliCollective-Deli-0.4.1"
+    ],
     "Incompatibilities": [],
     "NetworkMode": "both",
     "PackageType": "mod",
