@@ -1,0 +1,9 @@
+{
+    "name": "Wristimate",
+    "version_number": "1.2.1",
+    "dependencies": [
+        "DeliCollective-Deli-0.4.1"
+    ],
+    "description": "Displays information about the held magazine on the wrist of your hand. Preciseness of information is configurable.",
+    "website_url": "https://github.com/ash-hat/Wristimate"
+}

@@ -1,0 +1,9 @@
+{
+    "name": "AlternativeHands",
+    "version_number": "1.1.0",
+    "dependencies": [
+        "DeliCollective-Deli-0.4.1"
+    ],
+    "description": "Changes the controllers displayed, individually.",
+    "website_url": "https://github.com/ash-hat/AlternativeHands"
+}

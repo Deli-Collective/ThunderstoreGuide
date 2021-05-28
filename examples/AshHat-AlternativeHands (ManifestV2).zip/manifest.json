@@ -1,0 +1,23 @@
+{
+    "ManifestVersion": 2,
+    "AuthorName": "AshHat",
+    "Name": "AshHat-AlternativeHands",
+    "DisplayName": "Alternative Hands",
+    "Version": "1.1.0",
+    "Licence": "",
+    "WebsiteURL": "",
+    "Description": "",
+    "GameVersion": "N/A",
+    "Dependencies": [
+        "DeliCollective-Deli-0.4.1"
+    ],
+    "OptionalDependencies": [],
+    "Incompatibilities": [],
+    "NetworkMode": "both",
+    "PackageType": "mod",
+    "InstallMode": "managed",
+    "Loaders": [
+        "bepinex"
+    ],
+    "ExtraData": {}
+}
