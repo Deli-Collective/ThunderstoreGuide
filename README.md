@@ -29,12 +29,6 @@ I personally recommend sticking with `.deli` files still, unless the loader you 
 ## `manifest.json`
 Depending on your purpose, you need to choose between 2 different manifests. I recommend starting with v2, and rewriting to v1 before uploading.
 
-In either case, your mod name can only use:
-- `a-z`
-- `A-Z`
-- `0-9`
-- `_` (this gets rendered as a space in Thunderstore and r2modman)
-
 ### v2 (local testing)
 Manifest v2 is a WIP manifest format that cannot be used with Thunderstore, but required to install mods locally via r2modman. Most of your users will be using r2modman, so you should ensure that your mod installs properly through it.
 
@@ -83,6 +77,15 @@ Use this template
 If you do not have a website URL, simply leave it blank.  
 If you already have a v2 manifest, just copy the properties from it. The v1 name is *purely* the name, not including the author like v2 does.
 
+### Either
+There are some things to consider, regardless of the manifest version you're using:
+
+1. The mod name can only contain `a-z`, `A-Z`, `0-9`, and `_` (this gets rendered as a space in Thunderstore and r2modman). On v2, there is a hyphen to delimit author and mod name, but the mod name itself still follows these rules.
+
+2. If your Deli mod depends on other Deli mods (e.g. TakeAndHoldTweaker, WurstMod), you must add their "dependency string" to your dependencies. You can find the string by going to the mod's Thunderstore webpage, and looking at the info near the top:  
+![a screenshot of Wristimate's Thunderstore page with a red box around the dependency string](images/dependency_string.png)  
+Add the string to the `dependencies` array, like Deli in the manifest template.
+
 ## `README.md`
 Your Thunderstore `README.md` is like your BoneTome description. Unlike BoneTome descriptions though, Thunderstore READMEs support Markdown! If you are not familiar with Markdown, it's like an easy markup language that gives your text some flavor. You can use [GitHub's guide](https://guides.github.com/features/mastering-markdown) to learn the ins and outs, but do not use GitHub Flavored Markdown (GFM) features.
 
@@ -98,6 +101,7 @@ Ensure all of the following *before* uploading your mod to Thunderstore:
 - Your `.deli` file is up to date
 - Your manifest
   - has accurate information
+  - contains all the dependencies required
   - does not have a typo in the name
 - Your readme
   - does not have old installation instructions
@@ -115,7 +119,7 @@ Do not be worried if you upload a manifest of the wrong format, because it will 
 In the case that it successfully uploads but you messed up badly, you can contact a Thunderstore moderator to remove it. However, this should happen rarely.
 
 # Examples
-I've included examples of 2 of my mods in [the examples directory](examples/), unzipped for your viewing pleasure. As you can see, nothing is different between the V1 and V2 versions, except that the V2 version has a stripped down, V2 manifest.
+I've included examples of 2 of my code mods in [the examples directory](examples/), unzipped for your viewing pleasure. As you can see, nothing is different between the V1 and V2 versions, except that the V2 version has a stripped down, V2 manifest.
 
 # Sources
 - [The ror2modman wiki](https://github.com/ebkr/r2modmanPlus/wiki/)
