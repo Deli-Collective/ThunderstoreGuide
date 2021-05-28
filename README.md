@@ -16,9 +16,9 @@ Directory mods still exist, but using them requires a more complicated file stru
 ```
 MyAuthor-MyMod.zip/
   files/
-	plugins/
-	  manifest.json
-	  ...
+    plugins/
+      manifest.json
+      ...
   icon.png
   manifest.json
   README.md
