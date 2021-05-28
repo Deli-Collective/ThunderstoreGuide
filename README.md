@@ -93,7 +93,7 @@ Your Thunderstore `README.md` is like your BoneTome description. Unlike BoneTome
 If you already had a README file, make sure you remove any old installation instructions. It's confusing to users if you keep them in.
 
 ## `icon.png`
-The icon must simply be 256x256, and it can (but does not need to) have transparency. If you do not have an icon, and easy fix is to use white text with your project name over a transparent background.
+The icon must simply be 256x256, and it can (but does not need to) have transparency. If you do not have an icon, an easy fix is to use white text with your project name over a transparent background.
 
 # Final Checklist
 Ensure all of the following *before* uploading your mod to Thunderstore:
