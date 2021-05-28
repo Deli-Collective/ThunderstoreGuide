@@ -27,10 +27,10 @@ MyAuthor-MyMod.zip/
 I personally recommend sticking with `.deli` files still, unless the loader you use has optimizations ready for files on disk.
 
 ## `manifest.json`
-Depending on your purpose, you need to choose between 2 different manifests. I recommend starting with v2, and rewriting to v1 before uploading.
+Depending on your purpose, you need to choose between 2 different manifests. I recommend starting with ManifestV2, and rewriting to ManifestV1 before uploading.
 
-### v2 (local testing)
-Manifest v2 is a WIP manifest format that cannot be used with Thunderstore, but required to install mods locally via r2modman. Most of your users will be using r2modman, so you should ensure that your mod installs properly through it.
+### ManifestV2 (local testing)
+ManifestV2 is a WIP manifest format. While it cannot be used on Thunderstore, r2modman refuses to install ManifestV1 zips from sources other than Thunderstore. Most of your users will be using r2modman, so you should ensure that your mod installs properly on r2modman before uploading it to Thunderstore. For this reason, you use a ManifestV2.
 
 Use this template:
 ```json
@@ -59,9 +59,10 @@ Use this template:
 }
 ```
 
+### ManifestV1 (Thunderstore listing)
+When you are ready to create a release for Thunderstore, this is the format you need.
 
-### v1 (Thunderstore listing)
-Use this template
+Use this template:
 ```json
 {
     "name": "ChangeMe",
@@ -75,12 +76,12 @@ Use this template
 ```
 
 If you do not have a website URL, simply leave it blank.  
-If you already have a v2 manifest, just copy the properties from it. The v1 name is *purely* the name, not including the author like v2 does.
+If you already have a ManifestV2, just copy the properties from it. The ManifestV1 `name` is *purely* the name, not including the author like ManifestV2 does.
 
 ### Either
 There are some things to consider, regardless of the manifest version you're using:
 
-1. The mod name can only contain `a-z`, `A-Z`, `0-9`, and `_` (this gets rendered as a space in Thunderstore and r2modman). On v2, there is a hyphen to delimit author and mod name, but the mod name itself still follows these rules.
+1. The mod name can only contain `a-z`, `A-Z`, `0-9`, and `_` (this gets rendered as a space in Thunderstore and r2modman). On ManifestV2, there is a hyphen to delimit author and mod name, but the mod name itself still follows these rules.
 
 2. If your Deli mod depends on other Deli mods (e.g. TakeAndHoldTweaker, WurstMod), you must add their "dependency string" to your dependencies. You can find the string by going to the mod's Thunderstore webpage, and looking at the info near the top:  
 ![a screenshot of Wristimate's Thunderstore page with a red box around the dependency string](images/dependency_string.png)  
@@ -119,7 +120,7 @@ Do not be worried if you upload a manifest of the wrong format, because it will 
 In the case that it successfully uploads but you messed up badly, you can contact a Thunderstore moderator to remove it. However, this should happen rarely.
 
 # Examples
-I've included examples of 2 of my code mods in [the examples directory](examples/), unzipped for your viewing pleasure. As you can see, nothing is different between the V1 and V2 versions, except that the V2 version has a stripped down, V2 manifest.
+I've included examples of 2 of my code mods in [the examples directory](examples/), unzipped for your viewing pleasure. As you can see, nothing is different between the normal and ManifestV2 versions, except one uses ManifestV2.
 
 # Sources
 - [The ror2modman wiki](https://github.com/ebkr/r2modmanPlus/wiki/)
