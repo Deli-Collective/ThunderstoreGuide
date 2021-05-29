@@ -81,7 +81,7 @@ If you already have a ManifestV2, just copy the properties from it. The Manifest
 ### Either
 There are some things to consider, regardless of the manifest version you're using:
 
-1. The mod name can only contain `a-z`, `A-Z`, `0-9`, and `_` (this gets rendered as a space in Thunderstore and r2modman). On ManifestV2, there is a hyphen to delimit author and mod name, but the mod name itself still follows these rules.
+1. The mod name can only contain `a-z`, `A-Z`, `0-9`, and `_` (this gets rendered as a space on Thunderstore, but not r2modman). On ManifestV2, there is a hyphen to delimit author and mod name, but the mod name itself still follows these rules.
 
 2. If your Deli mod depends on other Deli mods (e.g. TakeAndHoldTweaker, WurstMod), you must add their "dependency string" to your dependencies. You can find the string by going to the mod's Thunderstore webpage, and looking at the info near the top:  
 ![a screenshot of Wristimate's Thunderstore page with a red box around the dependency string](images/dependency_string.png)  
